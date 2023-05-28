@@ -2,11 +2,29 @@
   <head>
     <style>
       :root {
-        --scale: 1;
+        --scale: .3;
         --spacing: 46px;
         --tilt: 30deg;
         --background-color: #f5f5f5;
         --diatype: "ABCDiatype", Helvetica, Arial, sans-serif;
+      }
+
+      ::-webkit-scrollbar {
+        width: 20px;
+        z-index: 1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-left: solid 1px black;
+        border-bottom: solid 1px black;
+        border-top: solid 1px black;
+        cursor: grab;
+        background: #f5f5f5;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #fff;
+        border-left: solid 1px black;
       }
 
       body {
@@ -33,7 +51,6 @@
         height: 40px;
         border-bottom: 1px solid black;
       }
-
 
       .header__left, .main__three, .footer__left, .footer__right, .header__right {
         flex: 1 1 auto;
@@ -94,7 +111,7 @@
       }
 
       .container {
-        transform: scale(var(--scale));
+        transform: translate(246px, -317px) scale(var(--scale));
         position: absolute;
         left: 50%;
         top: 50%;
@@ -135,38 +152,18 @@
         border-left: 1px solid black;
       }
 
-      img {
+      .container img {
         position: absolute;
         width: 200px;
         transition: transform .2s ease;
         cursor: pointer;
       }
 
+      /*
       img:hover {
         transform: translate(0,-40px) rotate(var(--tilt)) skew(var(--tilt));
       }
-
-      .img_1 {
-        transform: rotate(var(--tilt)) skew(var(--tilt));
-      }
-
-      .img_2 {
-        transform: rotate(var(--tilt)) skew(var(--tilt));
-        top: var(--spacing);
-        left: calc(-1 * var(--spacing));
-      }
-
-      .img_3 {
-        transform: rotate(var(--tilt)) skew(var(--tilt));
-        top: calc(2 * var(--spacing));
-        left: calc(-2 * var(--spacing));
-      }
-
-      .img_4 {
-        transform: rotate(var(--tilt)) skew(var(--tilt));
-        top: calc(3 * var(--spacing));
-        left: calc(-3 * var(--spacing));
-      }
+      */
 
       .list {
         grid-area: list;
@@ -229,8 +226,35 @@
         width: 40px;
         height: 40px;
         cursor: pointer;
-        background-image: url(/symbols/expand.svg);
+        background-image: url(expand.svg);
         border-right: 1px solid black;
+      }
+
+      .post {
+        padding: 40px;
+        border-bottom: 1px black solid;
+      }
+
+      .post img {
+        width: 100%;
+      }
+
+      .post .name {
+        font-family: var(--diatype);
+        font-weight: 400;
+        text-align: center;
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: 30px;
+      }
+
+      .post .date, .post .client {
+        font-family: var(--diatype); /* should be --diatype_i */
+        font-style: italic; 
+        font-weight: 100;
+        text-align: center;
+        font-size: 1.2em;
+        margin: 0;
       }
     </style>
   </head>
@@ -253,10 +277,7 @@
     <main>
       <div class='main__three' id='threeContainer'>
         <div class='container'>
-          <img class='img_1' src="castle.jpg">
-          <img class='img_2' src="zelda.jpeg">
-          <img class='img_3' src="mario.jpeg">
-          <img class='img_4' src="zelda_2.png">
+
         </div>
       </div>
       <section class="main__sidebar main__sidebar--hidden" id="mainSidebar">
@@ -277,6 +298,104 @@
           <div class="model" id="phoneName">Siemens ME45</div>
           <input type="checkbox" class="info" id="toggleSidebar">
         </div>
-      </footer>
+    </footer>
+
+    <script>
+
+      const images = ['castle.jpg', 'zelda.jpeg', 'mario.jpeg','zelda_2.png'];
+      const names = ['John Doe', 'Jane Smith', 'Alice Brown', 'Charlie Green', 'Emma White']; // Add more names as per your requirement.
+      const clients = ['Client A', 'Client B', 'Client C', 'Client D', 'Client E']; // Add more clients as per your requirement.
+
+      let projects = [];
+
+      for (let i = 0; i < 50; i++) {
+        let randomImage = images[Math.floor(Math.random() * images.length)];
+        let randomName = names[Math.floor(Math.random() * names.length)];
+        let randomClient = clients[Math.floor(Math.random() * clients.length)];
+
+        projects.push({
+          name: randomName,
+          date: new Date().toISOString().split('T')[0], // current date in 'YYYY-MM-DD' format.
+          client: randomClient,
+          image: randomImage,
+          posts: [
+            {
+              title: `Post Title ${i + 1}`,
+              images: [images[Math.floor(Math.random() * images.length)]],
+              text: `This is blog post number ${i + 1}.`
+            },
+            {
+              title: `Post Title ${i + 2}`,
+              images: [images[Math.floor(Math.random() * images.length)]],
+              text: `This is blog post number ${i + 2}.`
+            }
+          ]
+        });
+      }
+      console.log(projects)
+      function dom(elementType, properties, innerHTML) {
+        let element = document.createElement(elementType); // create a DOM element
+
+        for (let propertyName in properties) {
+          element[propertyName] = properties[propertyName]
+        }
+
+        element.innerHTML = innerHTML
+
+        return element;
+      }
+
+      let index = 0
+      const timelineNode = document.querySelector('.container')
+      const sectionNode = document.querySelector('section')
+      for (let project of projects) {
+        // Add images to timeline
+        let transformCSS = `transform: rotate(var(--tilt)) skew(var(--tilt));`
+        let topCSS = `top: calc(${index} * var(--spacing));`
+        let leftCSS = `left: calc(-${index} * var(--spacing));`
+
+        const imgNode = dom(
+          'IMG',
+          {
+            src: project.image,
+            style: `${transformCSS} ${topCSS} ${leftCSS}`
+          }
+        )
+        timelineNode.append(imgNode)
+
+        // Add project
+        const projectNode = dom('DIV', {}, `
+          <div class='post'>
+            <img src='${project.image}'>
+            <h1 class='name'>${project.name}</h1>
+            <h1 class='client'>${project.client}</h1>
+            <h1 class='date'>${project.date}</h1>
+          </div>
+        `)
+        sectionNode.append(projectNode)
+
+        // Add posts
+        for (let post of project.posts) {
+          const postNode = dom('DIV', {}, `
+              <div class='post'>
+                <h1 class='title'>${post.title}</h1>
+                <img src='${post.images[0]}'>
+                <p class='text'>${post.text}</p>
+              </div>
+          `)
+
+          sectionNode.append(postNode)
+        }
+
+        index++
+      }
+
+      document.querySelector('.main__three').addEventListener("wheel", (event) => {
+        let root = document.documentElement;
+        const scale = parseFloat(getComputedStyle(root).getPropertyValue('--scale'))
+        root.style.setProperty('--scale', scale + (.001 * event.deltaY))
+      });
+      
+    </script>
   </body>
 </html>
