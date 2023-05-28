@@ -1,0 +1,282 @@
+<html>
+  <head>
+    <style>
+      :root {
+        --scale: 1;
+        --spacing: 46px;
+        --tilt: 30deg;
+        --background-color: #f5f5f5;
+        --diatype: "ABCDiatype", Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        background-color: var(--background-color);
+        height: 100%;
+        margin: auto 0;
+        overflow: hidden;
+        font-family: var(--diatype);
+      }
+
+      .header {
+        grid-area: header;
+      }
+
+      .header, .footer, .main {
+        display: flex;
+        width: 100%;
+        position: relative;
+        flex-wrap: nowrap;
+        overflow: hidden;
+      }
+
+      .header {
+        height: 40px;
+        border-bottom: 1px solid black;
+      }
+
+
+      .header__left, .main__three, .footer__left, .footer__right, .header__right {
+        flex: 1 1 auto;
+        display: flex;
+      }
+
+      .footer__right, .header__right {
+        justify-content: space-between;
+      }
+
+      .header__right, .footer__right, .main__sidebar {
+        width: 33.33%;
+        flex: 0 0 auto !important; /* Maybe fix? */
+      }
+
+      .header__left, .main__three, .footer__left, .footer__right, .header__right {
+        flex: 1 1 auto;
+        display: flex;
+      }
+
+      .index {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-left: 5px;
+      }
+
+      .index, .about {
+        text-decoration: underline;
+      }
+
+      a, a:visited {
+        color: #000;
+        text-decoration: none;
+      }
+
+      a, button {
+        cursor: revert;
+      }
+
+      .index, .about {
+        text-decoration: underline;
+      }
+
+      .about {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-right: 20px;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        color: #000;
+        margin-left: 20px;
+      }
+
+      .container {
+        transform: scale(var(--scale));
+        position: absolute;
+        left: 50%;
+        top: 50%;
+      }
+
+      main {
+        display: flex;
+        width: 100%;
+        height: calc(100% - 80px); /* fix */
+
+        position: relative;
+        flex-wrap: nowrap;
+        overflow: hidden;
+      }
+
+      .main__three {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        width: 66.66%; /* fix */
+        cursor: grab;
+      }
+
+      .main__sidebar {
+        top: 0;
+        background-color: var(--background-color);
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        height: 100%;
+      }
+
+      .header__right, .footer__right, .main__sidebar {
+        width: 33.33%;
+        flex: 0 0 auto;
+      }
+
+      .main__sidebar, .footer__right {
+        border-left: 1px solid black;
+      }
+
+      img {
+        position: absolute;
+        width: 200px;
+        transition: transform .2s ease;
+        cursor: pointer;
+      }
+
+      img:hover {
+        transform: translate(0,-40px) rotate(var(--tilt)) skew(var(--tilt));
+      }
+
+      .img_1 {
+        transform: rotate(var(--tilt)) skew(var(--tilt));
+      }
+
+      .img_2 {
+        transform: rotate(var(--tilt)) skew(var(--tilt));
+        top: var(--spacing);
+        left: calc(-1 * var(--spacing));
+      }
+
+      .img_3 {
+        transform: rotate(var(--tilt)) skew(var(--tilt));
+        top: calc(2 * var(--spacing));
+        left: calc(-2 * var(--spacing));
+      }
+
+      .img_4 {
+        transform: rotate(var(--tilt)) skew(var(--tilt));
+        top: calc(3 * var(--spacing));
+        left: calc(-3 * var(--spacing));
+      }
+
+      .list {
+        grid-area: list;
+        width: 40px;
+        height: 40px;
+        background-image: url(list.svg);
+        border-right: 1px solid black;
+      }
+
+      .footer__left {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "list back next";
+        grid-template-columns: 1fr 40px 40px;
+        grid-template-rows: 40px;
+      }
+
+      .footer {
+        border-top: 1px solid black;
+        grid-area: footer;
+      }
+
+      .back {
+        grid-area: back;
+        border-left: black 1px solid;
+        width: 40px;
+        height: 40px;
+        background-image: url(back.svg);
+      }
+
+      .next {
+        grid-area: next;
+        border-left: black 1px solid;
+        width: 40px;
+        height: 40px;
+        background-image: url(next.svg);
+      }
+
+      .model {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-left: 10px;
+      }
+
+      input[type=checkbox] {
+        content: url(expand.svg);
+        appearance: none;
+        display: block;
+        width: 40px;
+        margin: 0;
+        height: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .info {
+        display: flex;
+        justify-content: right;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background-image: url(/symbols/expand.svg);
+        border-right: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="header__left">
+        <div class="logo">
+          <a href="/" class="link-logo">Phone Archaeology</a>
+        </div>
+      </div>
+      <div class="header__right">
+        <div class="index">
+          <a class="link-menu" href="timeline.html">Timeline</a>
+        </div>
+        <div class="about">
+          <a class="link-menu" href="about.html">About</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class='main__three' id='threeContainer'>
+        <div class='container'>
+          <img class='img_1' src="castle.jpg">
+          <img class='img_2' src="zelda.jpeg">
+          <img class='img_3' src="mario.jpeg">
+          <img class='img_4' src="zelda_2.png">
+        </div>
+      </div>
+      <section class="main__sidebar main__sidebar--hidden" id="mainSidebar">
+
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="footer__left">
+          <a href="/index.html">
+            <div class="list"></div>
+          </a>
+
+          <div id="prevBtn" class="back"></div>
+          <div id="nextBtn" class="next"></div>
+
+        </div>
+        <div class="footer__right">
+          <div class="model" id="phoneName">Siemens ME45</div>
+          <input type="checkbox" class="info" id="toggleSidebar">
+        </div>
+      </footer>
+  </body>
+</html>
