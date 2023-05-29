@@ -1,6 +1,12 @@
 - github repo
-- unify css tags
+x unify css tags
 - cleanup css naming
+- css structure:
+  - global stuff
+  - header css
+  - timeline css
+  - post css
+  - footer css
 - hover to pop up
 - click to scroll to item
 - drag to move
@@ -10,7 +16,7 @@
 - project page
 - mobile view
 - tighten responsive design
-- real font
+
 - cross browser testing
 - double border remove
   - scroll
@@ -19,3 +25,8 @@
 - way to load the data (headless cms, githib?)
 - put the real data on it
 - host the site
+
+
+Other notes:
+- real font?
+  - real font is expensive and very similar to Helvetica... should probably just stick with helvetica.
