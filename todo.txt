@@ -1,17 +1,19 @@
-- github repo
+
 x unify css tags
-- cleanup css naming
-- css structure:
-  - global stuff
-  - header css
-  - timeline css
-  - post css
-  - footer css
-- hover to pop up
+x cleanup css naming
+x hover to pop up
+x css structure:
+  x global stuff
+  x header css
+  x timeline css
+  x post css
+  x footer css
 - click to scroll to item
 - drag to move
-- support tables post type
 - about page
+- github repo
+- support tables post type
+-
 - expand/minimize
 - project page
 - mobile view
