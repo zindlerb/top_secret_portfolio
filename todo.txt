@@ -1,0 +1,21 @@
+- github repo
+- unify css tags
+- cleanup css naming
+- hover to pop up
+- click to scroll to item
+- drag to move
+- support tables post type
+- about page
+- expand/minimize
+- project page
+- mobile view
+- tighten responsive design
+- real font
+- cross browser testing
+- double border remove
+  - scroll
+  - bottom border
+- favicon
+- way to load the data (headless cms, githib?)
+- put the real data on it
+- host the site
