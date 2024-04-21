@@ -1,0 +1,32 @@
+TODO:
+x unify css tags
+x cleanup css naming
+x hover to pop up
+x css structure:
+  x global stuff
+  x header css
+  x timeline css
+  x post css
+  x footer css
+x click to scroll to item
+x drag to move
+x github repo
+- drag in a line
+- put the real data on it
+- about page
+- support tables post type
+- expand/minimize
+- project page
+- mobile view
+- tighten responsive design
+- cross browser testing
+- double border remove
+  - scroll
+  - bottom border
+- favicon
+- way to load the data (headless cms, github?)
+- host the site
+
+Other notes:
+- real font?
+  - real font is expensive and very similar to Helvetica... should probably just stick with helvetica.
