@@ -1,19 +1,23 @@
 const fs = require("fs").promises;
 const path = require("path");
+const markdownit = require("markdown-it");
 
 function generateId() {
   return Math.random().toString().replace(".", "");
 }
+
+const md = markdownit();
 
 async function loadProjects() {
   const projects = {};
   const rootDir = "./projects";
   // Reading all files in the directory
   const directories = await fs.readdir(rootDir);
-
   for (const projectDir of directories) {
+    console.log("Building", projectDir);
+    const id = generateId();
     projects[projectDir] = {
-      id: generateId(),
+      id,
     };
     const projectDirPath = path.join(rootDir, projectDir);
     const files = await fs.readdir(projectDirPath);
@@ -45,12 +49,14 @@ async function loadProjects() {
 
         projects[projectDir].posts = [
           {
-            id: generateId(),
+            id,
             title: projects[projectDir].title,
             images: [],
-            text: contentParts
-              .slice(contentStartInd, contentParts.length)
-              .join("\n"),
+            text: md.render(
+              contentParts
+                .slice(contentStartInd, contentParts.length)
+                .join("\n"),
+            ),
           },
         ];
       } else if (file.startsWith("header_image.")) {
@@ -64,47 +70,18 @@ async function loadProjects() {
   return projects;
 }
 
-/*
-
-{
-  id: generateId(),
-  name: randomName,
-  date: new Date().toISOString().split('T')[0], // current date in 'YYYY-MM-DD' format.
-  client: randomClient,
-  image: randomImage,
-  posts: [
-    {
-      id: generateId(),
-      title: `Post Title ${i + 1}`,
-      images: [images[Math.floor(Math.random() * images.length)]],
-      text: `This is blog post number ${i + 1}.`
-    },
-    {
-      id: generateId(),
-      title: `Post Title ${i + 2}`,
-      images: [images[Math.floor(Math.random() * images.length)]],
-      text: `This is blog post number ${i + 2}.`
-    }
-  ]
-}
-
-*/
-
 async function build() {
   const projects = await loadProjects();
 
-  const indexPage = await fs.readFile("./src/index.html", "utf8");
+  const indexPage = await fs.readFile("./src/homepage_data.js", "utf8");
 
   await fs.writeFile(
-    "./index.html",
+    "./build/homepage_data.js",
     indexPage.replace(
       "process.env.PROJECTS",
       JSON.stringify(Object.values(projects)),
     ),
   );
-
-  const aboutPage = await fs.readFile("./src/about.html", "utf8");
-  await fs.writeFile("./about.html", aboutPage);
 
   console.log("Build Complete!");
 }

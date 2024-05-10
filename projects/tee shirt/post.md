@@ -1,6 +1,6 @@
 ---
-title: Cool Tee Shirt
-date: 02/27/21
+title: Possum Dream
+date: 2021
 ---
 
-I make a cool tee shirt. It was good! Some notes on the process. Some notes on teh process. Some notes on the process. Some notes on teh process.
+Possum Dream Print

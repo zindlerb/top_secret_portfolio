@@ -1,0 +1,14 @@
+{
+  "name": "topsecretportfolio",
+  "version": "1.0.0",
+  "description": "TODO",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}

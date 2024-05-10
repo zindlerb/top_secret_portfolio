@@ -1,0 +1,10 @@
+- move js file out, html files not part of build just in main folder
+- about page
+- multiple images loading
+- remove frontmatter and just do headers + image, pull first image
+  - how to handle dates then?
+- make the hover transition smooth
+- back and forward buttons
+- centering button
+- mobile styles
+- run button working correctly - replit Y
