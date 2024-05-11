@@ -220,7 +220,7 @@ button {
   border-left: black 1px solid;
   width: 40px;
   height: 40px;
-  background-image: url(back.svg);
+  background-image: url(/assets/back.svg);
 }
 
 .next-icon {
@@ -228,7 +228,7 @@ button {
   border-left: black 1px solid;
   width: 40px;
   height: 40px;
-  background-image: url(next.svg);
+  background-image: url(/assets/next.svg);
 }
 
 .model {
