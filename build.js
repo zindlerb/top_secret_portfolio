@@ -7,6 +7,15 @@ function generateId() {
 }
 
 const md = markdownit();
+var defaultRender = md.renderer.rules.image
+md.renderer.rules.image = function (tokens, idx, options, env, self) {
+  const token = tokens[idx]
+  var src = token.attrGet('src');
+  token.attrSet('src', path.join(env.projectDirPath, src))
+
+  // Pass the token to the default renderer.
+  return defaultRender(tokens, idx, options, env, self);
+}
 
 async function loadProjects() {
   const projects = {};
@@ -14,13 +23,23 @@ async function loadProjects() {
   // Reading all files in the directory
   const directories = await fs.readdir(rootDir);
   for (const projectDir of directories) {
-    console.log("Building", projectDir);
     const id = generateId();
+
+    const projectDirPath = path.join(rootDir, projectDir);
+    let files
+    try {
+      files = await fs.readdir(projectDirPath);
+    } catch (e) {
+      console.log('Skipped', projectDir)
+      continue
+    }
+
+    console.log("Building", projectDir);
     projects[projectDir] = {
       id,
-    };
-    const projectDirPath = path.join(rootDir, projectDir);
-    const files = await fs.readdir(projectDirPath);
+      images: []
+    }
+
     for (const file of files) {
       if (file.endsWith(".md")) {
         const filePath = path.join(projectDirPath, file);
@@ -47,24 +66,22 @@ async function loadProjects() {
           ind++;
         }
 
-        projects[projectDir].posts = [
+        projects[projectDir].post = md.render(
+          contentParts
+            .slice(contentStartInd, contentParts.length)
+            .join("\n"),
           {
-            id,
-            title: projects[projectDir].title,
-            images: [],
-            text: md.render(
-              contentParts
-                .slice(contentStartInd, contentParts.length)
-                .join("\n"),
-            ),
-          },
-        ];
+            projectDirPath
+          }
+        )
       } else if (file.startsWith("header_image.")) {
-        projects[projectDir].image = path.join(projectDirPath, file);
-        projects[projectDir].headerUrl = path.join(projectDirPath, file);
+        projects[projectDir].images.push(path.join(projectDirPath, file))
+        projects[projectDir].headerUrl = path.join(projectDirPath, file)
+        // TODO: should detect image types
+      } else {
+        projects[projectDir].images.push(path.join(projectDirPath, file))
       }
     }
-    projects[projectDir].posts[0].images.push(projects[projectDir].headerUrl);
   }
 
   return projects;

@@ -26,7 +26,7 @@ function setTranslateAndScaleOnElement(el, scale, translateX, translateY) {
   );
 }
 
-let projects = [{"id":"042252327450824345","image":"projects/Beadwork/header_image.png","headerUrl":"projects/Beadwork/header_image.png","title":"Embroidery & Beadwork Sample","date":"2023","posts":[{"id":"042252327450824345","title":"Embroidery & Beadwork Sample","images":["projects/Beadwork/header_image.png"],"text":"<p>Glass beads and mohair embroidery</p>\n"}]},{"id":"09084473719428239","image":"projects/Cloud Dream/header_image.png","headerUrl":"projects/Cloud Dream/header_image.png","title":"Cloud Dream","date":"2020","posts":[{"id":"09084473719428239","title":"Cloud Dream","images":["projects/Cloud Dream/header_image.png"],"text":"<p>Lounge wear - light as air</p>\n"}]},{"id":"06507135788835243","image":"projects/Fur Bunny/header_image.png","headerUrl":"projects/Fur Bunny/header_image.png","title":"Bunny","date":"2022","posts":[{"id":"06507135788835243","title":"Bunny","images":["projects/Fur Bunny/header_image.png"],"text":"<p>A mink fur coat transformed.</p>\n"}]},{"id":"04085732878253261","image":"projects/Green Blazer Upcycle/header_image.png","headerUrl":"projects/Green Blazer Upcycle/header_image.png","title":"Green Blazer Upcycle","date":"2022","posts":[{"id":"04085732878253261","title":"Green Blazer Upcycle","images":["projects/Green Blazer Upcycle/header_image.png"],"text":"<p>Inspired by the Peter Do Open Back Blazer - thrifted and upcycled</p>\n"}]},{"id":"02770896595363155","image":"projects/Green Silk Suit/header_image.png","headerUrl":"projects/Green Silk Suit/header_image.png","title":"Green Suit","date":"2021","posts":[{"id":"02770896595363155","title":"Green Suit","images":["projects/Green Silk Suit/header_image.png"],"text":"<p>Green Silk Two Piece</p>\n"}]},{"id":"016801274077066686","image":"projects/Kappi Green Silk Dress/header_image.png","headerUrl":"projects/Kappi Green Silk Dress/header_image.png","title":"Green Silk","date":"2022","posts":[{"id":"016801274077066686","title":"Green Silk","images":["projects/Kappi Green Silk Dress/header_image.png"],"text":"<p>Light and flowy bridesmaid dress</p>\n"}]},{"id":"04058237122546724","image":"projects/Neil Suit/header_image.png","headerUrl":"projects/Neil Suit/header_image.png","title":"Brocade Suit Jacket","date":"2024","posts":[{"id":"04058237122546724","title":"Brocade Suit Jacket","images":["projects/Neil Suit/header_image.png"],"text":"<p>Suit Jacket</p>\n"}]},{"id":"023974948447525835","image":"projects/Pink Sleeves/header_image.png","headerUrl":"projects/Pink Sleeves/header_image.png","title":"Sleeves Girl","date":"2023","posts":[{"id":"023974948447525835","title":"Sleeves Girl","images":["projects/Pink Sleeves/header_image.png"],"text":"<p>Sleeve!</p>\n"}]},{"id":"09501779869803564","image":"projects/Purple Sweater/header_image.png","headerUrl":"projects/Purple Sweater/header_image.png","title":"Purple Sweater","posts":[{"id":"09501779869803564","title":"Purple Sweater","images":["projects/Purple Sweater/header_image.png"],"text":"<p>This is a purple sweater!</p>\n"}]},{"id":"004456362370916023","image":"projects/Silk Puffer Samples/header_image.png","headerUrl":"projects/Silk Puffer Samples/header_image.png","title":"Silk Puffer Jacket Samples","date":"2023","posts":[{"id":"004456362370916023","title":"Silk Puffer Jacket Samples","images":["projects/Silk Puffer Samples/header_image.png"],"text":"<p>Handstitched samples - Silk organza and polyfill</p>\n"}]},{"id":"013649509598226395","image":"projects/Upcycled Pants - Bleach Dye/header_image.png","headerUrl":"projects/Upcycled Pants - Bleach Dye/header_image.png","title":"Bleach Dye Upcycle","date":"2022","posts":[{"id":"013649509598226395","title":"Bleach Dye Upcycle","images":["projects/Upcycled Pants - Bleach Dye/header_image.png"],"text":"<p>Bleached and dyed pants</p>\n"}]},{"id":"04640068259629988","image":"projects/baklava knit/header_image.png","headerUrl":"projects/baklava knit/header_image.png","title":"Balaklava Knit","date":"7/9/23","posts":[{"id":"04640068259629988","title":"Balaklava Knit","images":["projects/baklava knit/header_image.png"],"text":"<h1>Some header</h1>\n<p>Silk &amp; Mohair for these <em><strong>chilly</strong></em> summer days; this air-light hood renders u completely unrecognizable for missions that require absolute comfort and camouflage.\n<a href=\"https://www.google.com/\">which means</a></p>\n"}]},{"id":"04564045821002003","image":"projects/cow suit/header_image.png","headerUrl":"projects/cow suit/header_image.png","title":"Cow Suit","date":"6/15/21","posts":[{"id":"04564045821002003","title":"Cow Suit","images":["projects/cow suit/header_image.png"],"text":"<p>Cows can't wear suits. But people can. Introducing cow suit. It's a suit styled with cow print.</p>\n"}]},{"id":"013404811933142224","image":"projects/tee shirt/header_image.png","headerUrl":"projects/tee shirt/header_image.png","title":"Possum Dream","date":"2021","posts":[{"id":"013404811933142224","title":"Possum Dream","images":["projects/tee shirt/header_image.png"],"text":"<p>Possum Dream Print</p>\n"}]},{"id":"049106528385944936","image":"projects/the BAG/header_image.png","headerUrl":"projects/the BAG/header_image.png","title":"THE BAG.","date":"6/27/23","posts":[{"id":"049106528385944936","title":"THE BAG.","images":["projects/the BAG/header_image.png"],"text":"<p>Evil Spy Tennis Bag - light reactive woven puffer; perfect for tennis game recon missions 🕶️🔦🎾🕴️</p>\n"}]},{"id":"09037881757686288","image":"projects/wedding dress/header_image.png","headerUrl":"projects/wedding dress/header_image.png","title":"Emily's Wedding Dress","date":"09/16/22","posts":[{"id":"09037881757686288","title":"Emily's Wedding Dress","images":["projects/wedding dress/header_image.png"],"text":"<p>One of the sweetest most precious projects I’ve gotten to work on so far. Thank you @emrubens for trusting me with such a special piece 🥹</p>\n<p>We built this tulle shell to go over a simple, sexy Reformation gown to create this etherial moment against the big Montana sky.</p>\n"}]}];
+let projects = [{"id":"05407453933581681","images":["projects/Beadwork/header_image.png"],"headerUrl":"projects/Beadwork/header_image.png","post":"<h1>Embroidery &amp; Beadwork Sample</h1>\n<p><img src=\"projects/Beadwork/header_image.png\" alt=\"header image\"></p>\n<p>Glass beads and mohair embroidery</p>\n"},{"id":"0772669375126604","images":["projects/Cloud Dream/backyard_model.jpeg","projects/Cloud Dream/header_image.png","projects/Cloud Dream/imp_in_the_garden.jpeg"],"headerUrl":"projects/Cloud Dream/header_image.png","post":"<h1>Cloud Dream</h1>\n<p><img src=\"projects/Cloud Dream/header_image.png\" alt=\"header image\">\nLounge wear - light as air</p>\n<p><img src=\"projects/Cloud Dream/backyard_model.jpeg\" alt=\"backyard model\">\n<img src=\"projects/Cloud Dream/imp_in_the_garden.jpeg\" alt=\"imp in garden\"></p>\n"},{"id":"02501006199260922","images":["projects/Fur Bunny/header_image.png"],"headerUrl":"projects/Fur Bunny/header_image.png","post":"<h1>Bunny</h1>\n<p><img src=\"projects/Fur Bunny/header_image.png\" alt=\"header image\"></p>\n<p>A mink fur coat transformed.</p>\n"},{"id":"04122434762607141","images":["projects/Green Blazer Upcycle/header_image.png"],"headerUrl":"projects/Green Blazer Upcycle/header_image.png","post":"<h1>Green Blazer Upcycle</h1>\n<p><img src=\"projects/Green Blazer Upcycle/header_image.png\" alt=\"header image\"></p>\n<p>Inspired by the Peter Do Open Back Blazer - thrifted and upcycled</p>\n"},{"id":"018674063973680477","images":["projects/Green Silk Suit/header_image.png"],"headerUrl":"projects/Green Silk Suit/header_image.png","post":"<h1>Green Suit</h1>\n<p><img src=\"projects/Green Silk Suit/header_image.png\" alt=\"header image\"></p>\n<p>Green Silk Two Piece</p>\n"},{"id":"09744671281377713","images":["projects/Kappi Green Silk Dress/dress_in_progress.jpeg","projects/Kappi Green Silk Dress/header_image.png"],"headerUrl":"projects/Kappi Green Silk Dress/header_image.png","post":"<h1>Green Silk</h1>\n<p><img src=\"projects/Kappi Green Silk Dress/header_image.png\" alt=\"header image\"></p>\n<p>Light and flowy bridesmaid dress</p>\n<p><img src=\"projects/Kappi Green Silk Dress/dress_in_progress.jpeg\" alt=\"kappi\"></p>\n"},{"id":"03567414944619929","images":["projects/Neil Suit/header_image.png","projects/Neil Suit/inside_pocket_suit.jpeg","projects/Neil Suit/logo_suit.jpeg"],"headerUrl":"projects/Neil Suit/header_image.png","post":"<h1>Brocade Suit Jacket</h1>\n<p><img src=\"projects/Neil Suit/header_image.png\" alt=\"header image\"></p>\n<p>Suit Jacket</p>\n<p><img src=\"projects/Neil Suit/inside_pocket_suit.jpeg\" alt=\"inside pocket\">\n<img src=\"projects/Neil Suit/logo_suit.jpeg\" alt=\"logo suit\"></p>\n"},{"id":"09474988359340681","images":["projects/Pink Sleeves/drag_sleeves.jpeg","projects/Pink Sleeves/header_image.png"],"headerUrl":"projects/Pink Sleeves/header_image.png","post":"<h1>Sleeves Girl</h1>\n<p><img src=\"projects/Pink Sleeves/header_image.png\" alt=\"header image\"></p>\n<p>Sleeve!</p>\n<p><img src=\"projects/Pink Sleeves/drag_sleeves.jpeg\" alt=\"drag sleeves\"></p>\n"},{"id":"0942600768325504","images":["projects/Purple Sweater/header_image.png"],"headerUrl":"projects/Purple Sweater/header_image.png","post":"<h1>Purple Sweater</h1>\n<p><img src=\"projects/Purple Sweater/header_image.png\" alt=\"header image\"></p>\n<p>This is a purple sweater!</p>\n"},{"id":"09617516947698315","images":["projects/Silk Puffer Samples/header_image.png"],"headerUrl":"projects/Silk Puffer Samples/header_image.png","post":"<h1>Silk Puffer Jacket Samples</h1>\n<p><img src=\"projects/Silk Puffer Samples/header_image.png\" alt=\"header image\"></p>\n<p>Handstitched samples - Silk organza and polyfill</p>\n"},{"id":"04478327584769928","images":["projects/Upcycled Pants - Bleach Dye/header_image.png","projects/Upcycled Pants - Bleach Dye/pants_painted.jpeg"],"headerUrl":"projects/Upcycled Pants - Bleach Dye/header_image.png","post":"<h1>Bleach Dye Upcycle</h1>\n<p><img src=\"projects/Upcycled Pants - Bleach Dye/header_image.png\" alt=\"header image\"></p>\n<p>Bleached and dyed pants</p>\n<p><img src=\"projects/Upcycled Pants - Bleach Dye/pants_painted.jpeg\" alt=\"pants painted\"></p>\n"},{"id":"009280605023753052","images":["projects/baklava knit/balaclava_green_front.jpeg","projects/baklava knit/balaclava_green_side.jpeg","projects/baklava knit/balaclava_light.jpeg","projects/baklava knit/flat_balaclava.jpeg","projects/baklava knit/header_image.png","projects/baklava knit/ravi_balaclava.jpeg"],"headerUrl":"projects/baklava knit/header_image.png","post":"<h1>Balaklava Knit</h1>\n<p><img src=\"projects/baklava knit/header_image.png\" alt=\"header image\"></p>\n<p>Silk &amp; Mohair for these <em><strong>chilly</strong></em> summer days; this air-light hood renders u completely unrecognizable for missions that require absolute comfort and camouflage. <a href=\"https://www.google.com/\">which means</a></p>\n<p><img src=\"projects/baklava knit/balaclava_green_front.jpeg\" alt=\"\">\n<img src=\"projects/baklava knit/balaclava_green_side.jpeg\" alt=\"\">\n<img src=\"projects/baklava knit/balaclava_light.jpeg\" alt=\"\">\n<img src=\"projects/baklava knit/flat_balaclava.jpeg\" alt=\"\">\n<img src=\"projects/baklava knit/ravi_balaclava.jpeg\" alt=\"\"></p>\n"},{"id":"06465003196611929","images":["projects/cow suit/cow_suit_hallway.jpeg","projects/cow suit/header_image.png"],"headerUrl":"projects/cow suit/header_image.png","post":"<h1>Cow Suit</h1>\n<p><img src=\"projects/cow suit/header_image.png\" alt=\"header image\"></p>\n<p>Cows can't wear suits. But people can. Introducing cow suit. It's a suit styled with cow print.</p>\n<p><img src=\"projects/cow suit/cow_suit_hallway.jpeg\" alt=\"cow suit hallway\"></p>\n"},{"id":"04370400745586527","images":["projects/tee shirt/behind_tee.jpeg","projects/tee shirt/bush_tee.jpeg","projects/tee shirt/header_image.png","projects/tee shirt/mask_tee.jpeg"],"headerUrl":"projects/tee shirt/header_image.png","post":"<h1>Possum Dream</h1>\n<p><img src=\"projects/tee shirt/header_image.png\" alt=\"header image\"></p>\n<p>Possum Dream Print</p>\n<p><img src=\"projects/tee shirt/bush_tee.jpeg\" alt=\"\">\n<img src=\"projects/tee shirt/mask_tee.jpeg\" alt=\"\"></p>\n"},{"id":"06684275127457071","images":["projects/the BAG/header_image.png","projects/the BAG/rainbow_bag.jpeg","projects/the BAG/tennis_ball_bag.jpeg"],"headerUrl":"projects/the BAG/header_image.png","post":"<h1>Tennis Bag</h1>\n<p>Evil Spy Tennis Bag - light reactive woven puffer; perfect for tennis game recon missions 🕶️🔦🎾🕴️</p>\n<p><img src=\"projects/the BAG/header_image.png\" alt=\"header image\"></p>\n<p>This is a rainbow bag:</p>\n<p><img src=\"projects/the BAG/rainbow_bag.jpeg\" alt=\"Rainbow Bag\">\n<img src=\"projects/the BAG/tennis_ball_bag.jpeg\" alt=\"tennis ball bag\"></p>\n"},{"id":"015804957437335743","images":["projects/wedding dress/header_image.png","projects/wedding dress/wedding_dress_arm.jpeg","projects/wedding dress/wedding_dress_kiss.jpeg"],"headerUrl":"projects/wedding dress/header_image.png","post":"<h1>Emily's Wedding Dress</h1>\n<p><img src=\"projects/wedding dress/header_image.png\" alt=\"header image\"></p>\n<p>One of the sweetest most precious projects I’ve gotten to work on so far. Thank you @emrubens for trusting me with such a special piece 🥹</p>\n<p>We built this tulle shell to go over a simple, sexy Reformation gown to create this etherial moment against the big Montana sky.</p>\n<p><img src=\"projects/wedding dress/wedding_dress_arm.jpeg\" alt=\"\">\n<img src=\"projects/wedding dress/wedding_dress_kiss.jpeg\" alt=\"\"></p>\n"}];
 
 function dom(elementType, properties, innerHTML) {
   let element = document.createElement(elementType); // create a DOM element
@@ -52,28 +52,24 @@ for (let project of projects) {
 
   const imgNode = dom("IMG", {
     id: `img-${project.id}`,
-    src: project.image,
+    src: project.headerUrl,
     style: `${transformCSS} ${topCSS} ${leftCSS}`,
   });
   timelineNode.append(imgNode);
 
   // Add posts
-  for (let post of project.posts) {
-    const postNode = dom(
-      "DIV",
-      {},
-      `
-        <div class='post' id='post-${post.id}'>
-          <h1 class='title'>${post.title}</h1>
-          <img src='${post.images[0]}'>
-          <p class='text'>${post.text}</p>
+  console.log('project', project)
+  const postNode = dom(
+    "DIV",
+    {},
+    `
+        <div class='post' id='post-${project.id}'>
+          ${project.post}
         </div>
     `,
-    );
+  );
 
-    sectionNode.append(postNode);
-  }
-
+  sectionNode.append(postNode);
   index++;
 }
 
@@ -86,7 +82,7 @@ timelineParentNode.addEventListener("wheel", (event) => {
     parseTranslateAndScaleFromElement(timelineNode);
   setTranslateAndScaleOnElement(
     timelineNode,
-    scale + 0.001 * event.deltaY,
+    Math.min(Math.max(scale + 0.001 * event.deltaY, .1), 3),
     translateX,
     translateY,
   );
@@ -96,6 +92,8 @@ timelineParentNode.addEventListener("wheel", (event) => {
 let grabbing = false;
 let mouseDownPoint;
 let originalTranslateProperties;
+const defaultTimelineProperties = parseTranslateAndScaleFromElement(timelineNode);
+
 timelineParentNode.addEventListener("mousedown", (event) => {
   if (!event.target.classList.contains("main__timeline")) return;
 
@@ -143,3 +141,21 @@ document.addEventListener("click", function (e) {
     document.getElementById(`post-${rawIdNumber}`).scrollIntoView();
   }
 });
+
+document.querySelector('.back-icon').addEventListener("click", function (e) {
+  // prev image
+})
+
+document.querySelector('.next-icon').addEventListener("click", function (e) {
+  // next image
+})
+
+document.querySelector('.center-icon').addEventListener("click", function (e) {
+  const originalTranslateProperties = parseTranslateAndScaleFromElement(timelineNode);
+  setTranslateAndScaleOnElement(
+    timelineNode,
+    defaultTimelineProperties.scale,
+    defaultTimelineProperties.translateX,
+    defaultTimelineProperties.translateY
+  );
+})

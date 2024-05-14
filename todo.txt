@@ -1,10 +1,16 @@
-- move js file out, html files not part of build just in main folder
-- about page
+x move js file out, html files not part of build just in main folder
+x about page rough
 - multiple images loading
 - remove frontmatter and just do headers + image, pull first image
-  - how to handle dates then?
-- make the hover transition smooth
+  - how to handle dates then? - just have <date></date> tag
 - back and forward buttons
+- get whole replit setup working correctly
 - centering button
 - mobile styles
-- run button working correctly - replit Y
+- correct centering icon
+- make the hover transition smooth
+- custom alternations page rough
+- make the performance nice (may need to auto resize the images and make image loading async for the sidebar
+- <date></date> handling
+
+- polish design

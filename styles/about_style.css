@@ -1,0 +1,19 @@
+.about-content {
+  width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  height: 80%;
+}
+
+.about_image {
+  max-width: 400px;
+  margin: auto;
+  display: block;
+}
+
+.about_text {
+  margin-left: 80px;
+  font-size: 26px;
+  font-weight: 2q00;
+}

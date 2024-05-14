@@ -1,5 +1,5 @@
----
-title: Embroidery & Beadwork Sample
-date: 2023
----
-Glass beads and mohair embroidery 
+# Embroidery & Beadwork Sample
+
+![header image](header_image.png)
+
+Glass beads and mohair embroidery

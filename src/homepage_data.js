@@ -52,28 +52,24 @@ for (let project of projects) {
 
   const imgNode = dom("IMG", {
     id: `img-${project.id}`,
-    src: project.image,
+    src: project.headerUrl,
     style: `${transformCSS} ${topCSS} ${leftCSS}`,
   });
   timelineNode.append(imgNode);
 
   // Add posts
-  for (let post of project.posts) {
-    const postNode = dom(
-      "DIV",
-      {},
-      `
-        <div class='post' id='post-${post.id}'>
-          <h1 class='title'>${post.title}</h1>
-          <img src='${post.images[0]}'>
-          <p class='text'>${post.text}</p>
+  console.log('project', project)
+  const postNode = dom(
+    "DIV",
+    {},
+    `
+        <div class='post' id='post-${project.id}'>
+          ${project.post}
         </div>
     `,
-    );
+  );
 
-    sectionNode.append(postNode);
-  }
-
+  sectionNode.append(postNode);
   index++;
 }
 
@@ -86,7 +82,7 @@ timelineParentNode.addEventListener("wheel", (event) => {
     parseTranslateAndScaleFromElement(timelineNode);
   setTranslateAndScaleOnElement(
     timelineNode,
-    scale + 0.001 * event.deltaY,
+    Math.min(Math.max(scale + 0.001 * event.deltaY, .1), 3),
     translateX,
     translateY,
   );
@@ -96,6 +92,8 @@ timelineParentNode.addEventListener("wheel", (event) => {
 let grabbing = false;
 let mouseDownPoint;
 let originalTranslateProperties;
+const defaultTimelineProperties = parseTranslateAndScaleFromElement(timelineNode);
+
 timelineParentNode.addEventListener("mousedown", (event) => {
   if (!event.target.classList.contains("main__timeline")) return;
 
@@ -143,3 +141,21 @@ document.addEventListener("click", function (e) {
     document.getElementById(`post-${rawIdNumber}`).scrollIntoView();
   }
 });
+
+document.querySelector('.back-icon').addEventListener("click", function (e) {
+  // prev image
+})
+
+document.querySelector('.next-icon').addEventListener("click", function (e) {
+  // next image
+})
+
+document.querySelector('.center-icon').addEventListener("click", function (e) {
+  const originalTranslateProperties = parseTranslateAndScaleFromElement(timelineNode);
+  setTranslateAndScaleOnElement(
+    timelineNode,
+    defaultTimelineProperties.scale,
+    defaultTimelineProperties.translateX,
+    defaultTimelineProperties.translateY
+  );
+})
