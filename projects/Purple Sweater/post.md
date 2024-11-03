@@ -1,5 +1,7 @@
-# Purple Sweater
+# Knit
 
-![header image](header_image.png)
+Silk & mohair cropped sweater; handknit.
 
-This is a purple sweater!
+![](header_image.png)
+![header_image](sweaterboobs1.jpeg)
+![](sweaterback.jpeg)

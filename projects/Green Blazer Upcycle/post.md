@@ -1,5 +1,6 @@
-# Green Blazer Upcycle
+# Upcycle
 
-![header image](header_image.png)
+Thrifted linen blazer with an open back, shoulder ruffles and back tie.
 
-Inspired by the Peter Do Open Back Blazer - thrifted and upcycled
+![header_image](GreenBlazer.jpeg)
+![](GreenBlazerinAction.jpeg)

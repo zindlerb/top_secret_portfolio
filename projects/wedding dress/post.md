@@ -1,10 +1,7 @@
-# Emily's Wedding Dress
+# Bespoke
 
-![header image](header_image.png)
+A cream tulle over dress and detachable sleeves to accessorize a simple, sexy Reformation slip dress.
 
-One of the sweetest most precious projects I’ve gotten to work on so far. Thank you @emrubens for trusting me with such a special piece 🥹
-
-We built this tulle shell to go over a simple, sexy Reformation gown to create this etherial moment against the big Montana sky.
-
+![](header_image.png)
 ![](wedding_dress_arm.jpeg)
-![](wedding_dress_kiss.jpeg)
+![header_image](wedding_dress_kiss.jpeg)

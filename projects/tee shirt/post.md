@@ -1,8 +1,6 @@
-# Possum Dream
+# Custom
 
-![header image](header_image.png)
-
-Possum Dream Print
-
-![](bush_tee.jpeg)
-![](mask_tee.jpeg)
+Possum Dream collage shirt, printed on heavy organic cotton tees.
+![](header_image.png)
+![header_image](mask_tee.jpeg)
+![](behind_tee.jpeg)
