@@ -1,7 +1,3 @@
-# Upcycle
+# Green cotton trousers
 
-Green cotton trousers bleached dyed with customized text and patterns.
-
-![header image](header_image.png)
-![](bleachedpants1.jpeg)
-![](bleachedpants2.jpeg)
+Bleached dyed with customized text and patterns.

@@ -17,6 +17,20 @@ md.renderer.rules.image = function (tokens, idx, options, env, self) {
   return defaultRender(tokens, idx, options, env, self);
 }
 
+const IMAGE_TYPES = [
+  'jpg',
+  'jpeg',
+  'png',
+  'gif',
+  'bmp',
+  'tiff',
+  'tif',
+  'webp',
+  'heic',
+  'heif',
+  'avif'
+]
+
 async function loadProjects() {
   const projects = {};
   const rootDir = "./projects";
@@ -40,6 +54,7 @@ async function loadProjects() {
       images: []
     }
 
+    console.log('files', files)
     for (const file of files) {
       if (file.endsWith(".md")) {
         const filePath = path.join(projectDirPath, file);
@@ -77,10 +92,18 @@ async function loadProjects() {
       } else if (file.startsWith("header_image.")) {
         projects[projectDir].images.push(path.join(projectDirPath, file))
         projects[projectDir].headerUrl = path.join(projectDirPath, file)
-        // TODO: should detect image types
-      } else {
-        projects[projectDir].images.push(path.join(projectDirPath, file))
+      } else if (IMAGE_TYPES.some((type) => file.endsWith(type))) {
+        const fullFilepath = path.join(projectDirPath, file)
+        if (file.startsWith("header_image.")) {
+          projects[projectDir].headerUrl = fullFilepath
+        }
+
+        projects[projectDir].images.push(fullFilepath)
       }
+    }
+
+    if (!projects[projectDir].headerUrl) {
+      projects[projectDir].headerUrl = projects[projectDir].images[0]
     }
   }
 

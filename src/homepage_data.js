@@ -59,12 +59,14 @@ for (let project of projects) {
 
   // Add posts
   console.log('project', project)
+  const projectImages = project.images.map((image) => `<img src='${image}'></img>`).join('\n')
   const postNode = dom(
     "DIV",
     {},
     `
         <div class='post' id='post-${project.id}'>
           ${project.post}
+          ${projectImages}
         </div>
     `,
   );

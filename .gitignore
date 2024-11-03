@@ -1,2 +1,4 @@
 .DS_Store
 .breakpoints
+node_modules
+build
